@@ -9,18 +9,19 @@
     <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./vendor/owl/css/owl.css">
     <link rel="stylesheet" href="./vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./vendor/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>jQuery- aula 19-part 1 e 2</title>
+    <title>jQuery- aula 18</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="./assets/images/header-logo.png" width="160px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon btn-sm"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
@@ -28,13 +29,16 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Categorias</a>
+                            <a class="nav-link" href="#destaque">Feminino</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Tendências</a>
+                            <a class="nav-link" href="#destaque2">Masculuno</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
+                            <a class="nav-link nav-modal-open" rel="sobre" href="#sobre">Sobre-nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-modal-open" rel="contato" href="#contato" >Contato</a>
                         </li>
                     </ul>
                 </div>
@@ -43,7 +47,7 @@
     </header>
 
     <!--start carousel-->
-    <section class="slider-section">
+    <section class="slider-section container-fluid">
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
@@ -58,12 +62,11 @@
                 <div class="carousel-item active bg_azul">
                     <div class="row d-flex align-items-center">
                         <div class="col d-none d-md-flex justify-content-center">
-                            <div>
+                            <div class="">
                                 <h3 class="h3 fw-light text-white fw-bold">Novidade</h3>
                                 <h1 class="h1 text-white fw-bold">Moda feminina</h1>
                                 <p class="text-white fw-bold"><i>Descontos de até 25%</i></p>
-                                <div>
-                                    <a class="btn btn-dark btn-ecomm" href="shop-grid.html">Compre agora</a>
+                                <div class=""><a class="btn btn-dark btn-ecomm" href="shop-grid.html">Compre agora</a>
                                 </div>
                             </div>
                         </div>
@@ -76,12 +79,11 @@
                 <div class="carousel-item bg_vermelho">
                     <div class="row d-flex align-items-center">
                         <div class="col d-none d-md-flex justify-content-center">
-                            <div>
+                            <div class="">
                                 <h3 class="h3 fw-light text-white fw-bold">Últimas Tendências</h3>
                                 <h1 class="h1 text-white fw-bold">Novidades da moda</h1>
                                 <p class="text-white fw-bold"><i>Descontos de até 35%</i></p>
-                                <div>
-                                    <a class="btn btn-dark btn-ecomm" href="shop-grid.html">Compre agora</a>
+                                <div class=""> <a class="btn btn-dark btn-ecomm" href="shop-grid.html">Compre agora</a>
                                 </div>
                             </div>
                         </div>
@@ -94,11 +96,11 @@
                 <div class="carousel-item bg_roxo">
                     <div class="row d-flex align-items-center">
                         <div class="col d-none d-md-flex justify-content-center">
-                            <div>
+                            <div class="">
                                 <h3 class="h3 fw-light text-white fw-bold">Novas Tendências</h3>
                                 <h1 class="h1 text-white fw-bold">Moda infantil</h1>
                                 <p class="text-white fw-bold"><i>Descontos de até 15%</i></p>
-                                <div><a class="btn btn-dark btn-ecomm" href="shop-grid.html">Compre agora</a>
+                                <div class=""><a class="btn btn-dark btn-ecomm" href="shop-grid.html">Compre agora</a>
                                 </div>
                             </div>
                         </div>
@@ -111,12 +113,11 @@
                 <div class="carousel-item bg_amarelo">
                     <div class="row d-flex align-items-center">
                         <div class="col d-none d-md-flex justify-content-center">
-                            <div>
+                            <div class="">
                                 <h3 class="h3 fw-light text-dark fw-bold">Últimas Tendências</h3>
                                 <h1 class="h1 text-dark fw-bold">Itens eletrônicos</h1>
                                 <p class="text-dark fw-bold"><i>Descontos de até 45%</i></p>
-                                <div>
-                                    <a class="btn btn-dark btn-ecomm" href="shop-grid.html">Compre agora</a>
+                                <div class=""><a class="btn btn-dark btn-ecomm" href="shop-grid.html">Compre agora</a>
                                 </div>
                             </div>
                         </div>
@@ -129,12 +130,11 @@
                 <div class="carousel-item bg_verde">
                     <div class="row d-flex align-items-center">
                         <div class="col d-none d-md-flex justify-content-center">
-                            <div>
+                            <div class="">
                                 <h3 class="h3 fw-light text-white fw-bold">Super negócio</h3>
                                 <h1 class="h1 text-white fw-bold">Mobília doméstica</h1>
                                 <p class="text-white fw-bold"><i>Descontos de até 24%</i></p>
-                                <div>
-                                    <a class="btn btn-dark btn-ecomm" href="shop-grid.html">Compre agora</a>
+                                <div class=""><a class="btn btn-dark btn-ecomm" href="shop-grid.html">Compre agora</a>
                                 </div>
                             </div>
                         </div>
@@ -157,18 +157,21 @@
     </section>
     <!--end carousel-->
 
+    <!--start owl-carousel feminino-->
     <div id="featured" class="featured-items">
-        <div class="container">
-            <div class="row">
+        <div class="container-fluid">
+            <div id="destaque" class="row">
+                <!-- Destaque e line -->
                 <div class="col-md-12">
                     <div class="section-heading">
+                        <h2 id="dest" class="anima_mov bg-light" style="margin-left: -200px;">Destaques Feminino</h2>
                         <div class="line-dec"></div>
-                        <h1>Destaques</h1>
+                        
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
-                        <div class="featured-item ">
+                        <div class="featured-item">
                             <!-- lançamentos-->
                             <div class="launch"></div>
                             <img src="./assets/images/carousel_owl/01.png" alt="Item 1">
@@ -180,7 +183,7 @@
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                             </div>
-                            <h6>R$ 20,00</h6>
+                            <h6>R$ 28,00</h6>
                             <a class="btncomp" href="#">Comprar</a>
                         </div>
                         <div class="featured-item">
@@ -193,7 +196,7 @@
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                             </div>
-                            <h6>R$ 20,00</h6>
+                            <h6>R$ 32,00</h6>
                             <a class="btncomp" href="#">Comprar</a>
                         </div>
                         <div class="featured-item">
@@ -208,7 +211,7 @@
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                             </div>
-                            <h6>R$ 20,00</h6>
+                            <h6>R$ 40,00</h6>
                             <a class="btncomp" href="#">Comprar</a>
                         </div>
                         <div class="featured-item">
@@ -221,7 +224,7 @@
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                             </div>
-                            <h6>R$ 20,00</h6>
+                            <h6>R$ 35,00</h6>
                             <a class="btncomp" href="#">Comprar</a>
                         </div>
                         <div class="featured-item">
@@ -234,7 +237,7 @@
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                             </div>
-                            <h6>R$ 20,00</h6>
+                            <h6>R$ 47,00</h6>
                             <a class="btncomp" href="#">Comprar</a>
                         </div>
                         <div class="featured-item">
@@ -249,7 +252,7 @@
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                             </div>
-                            <h6>R$ 20,00</h6>
+                            <h6>R$ 38,00</h6>
                             <a class="btncomp" href="#">Comprar</a>
                         </div>
                         <div class="featured-item">
@@ -262,7 +265,7 @@
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                             </div>
-                            <h6>R$ 20,00</h6>
+                            <h6>R$ 34,00</h6>
                             <a class="btncomp" href="#">Comprar</a>
                         </div>
                         <div class="featured-item">
@@ -275,7 +278,7 @@
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                             </div>
-                            <h6>R$ 20,00</h6>
+                            <h6>R$ 32,00</h6>
                             <a class="btncomp" href="#">Comprar</a>
                         </div>
                         <div class="featured-item">
@@ -288,7 +291,7 @@
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                             </div>
-                            <h6>R$ 20,00</h6>
+                            <h6>R$ 35,00</h6>
                             <a class="btncomp" href="#">Comprar</a>
                         </div>
                         <div class="featured-item">
@@ -303,7 +306,7 @@
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                             </div>
-                            <h6>R$ 20,00</h6>
+                            <h6>R$ 30,00</h6>
                             <a class="btncomp" href="#">Comprar</a>
                         </div>
                         <div class="featured-item">
@@ -316,7 +319,7 @@
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                             </div>
-                            <h6>R$ 20,00</h6>
+                            <h6>R$ 27,00</h6>
                             <a class="btncomp" href="#">Comprar</a>
                         </div>
                     </div>
@@ -324,13 +327,106 @@
             </div>
         </div>
     </div>
+    <!--end owl-carousel-->
 
+    <!--start owl-carousel masculino-->
+    <div id="featured2" class="featured-items2">
+        <div class="container-fluid">
+            <div id="destaque2" class="row">
+                <!-- Destaque e line -->
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2 id="destm" class="anima_mov bg-light">Destaques Masculino</h2>
+                        <div class="line-dec"></div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="featured-item">
+                            <!-- lançamentos-->
+                            <div class="launch"></div>
+                            <img src="./assets/images/carousel_owl2/01.png" alt="Item 1">
+                            <h4>Produto 1</h4>
+                            <div class="mb-1 small">
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                            </div>
+                            <h6>R$ 228,00</h6>
+                            <a class="btncomp" href="#">Comprar</a>
+                        </div>
+                        <div class="featured-item">
+                            <img src="./assets/images/carousel_owl2/02.png" alt="Item 2">
+                            <h4>Produto 2</h4>
+                            <div class="mb-1 small">
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                            </div>
+                            <h6>R$ 235,00</h6>
+                            <a class="btncomp" href="#">Comprar</a>
+                        </div>
+                        <div class="featured-item">
+                            <!-- lançamentos-->
+                            <div class="launch"></div>
+                            <img src="./assets/images/carousel_owl2/03.png" alt="Item 3">
+                            <h4>Produto 3</h4>
+                            <div class="mb-1 small">
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                            </div>
+                            <h6>R$ 246,00</h6>
+                            <a class="btncomp" href="#">Comprar</a>
+                        </div>
+                        <div class="featured-item">
+                            <img src="./assets/images/carousel_owl2/04.png" alt="Item 4">
+                            <h4>Produto 4</h4>
+                            <div class="mb-1 small">
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                            </div>
+                            <h6>R$ 1.260,00</h6>
+                            <a class="btncomp" href="#">Comprar</a>
+                        </div>
+                        <div class="featured-item">
+                            <!-- lançamentos-->
+                            <div class="launch"></div>
+                            <img src="./assets/images/carousel_owl2/05.png" alt="Item 5">
+                            <h4>Produto 5</h4>
+                            <div class="mb-1 small">
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                            </div>
+                            <h6>R$ 1.260,00</h6>
+                            <a class="btncomp" href="#">Comprar</a>
+                        </div>
+                                                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end owl-carousel-->
 
-    <div class="footer bg-light">
-        <div class="container">
-            <div class="row d-flex">
-                <div class="col-md-6 bg-light">
-                    <div class="footer-menu">
+    <div class="footer pt-3">
+        <div class="container-fluid">
+            <div class="row d-flex py-1 px-2">
+                <div class="col-md-6 bg-light footer-h">
+                    <div id="aque" class="footer-menu">
 
                         <ul>
                             <li><a href="#"><i class="fab fa-facebook">&nbsp;&nbsp;</i>facebook.com/shopied/</a></li>
@@ -345,10 +441,10 @@
                     <div class="social-icons">
 
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Categorias</a></li>
-                            <li><a href="#">Tendências</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="#top">Home</a></li>
+                            <li><a href="#destaque">Feminino</a></li>
+                            <li><a href="#sobre" rel="sobre" class="nav-modal-open">Sobre</a></li>
+                            <li><a href="#contato" rel="contato" class="nav-modal-open">Contato</a></li>
                         </ul>
 
                     </div>
@@ -358,7 +454,7 @@
     </div>
 
     <div class="sub-footer">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="copyright-text">
@@ -368,15 +464,112 @@
             </div>
         </div>
     </div>
+    
+
+    <!-- Prepara classe Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">              
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--sobre modal-->
+    <div id="sobre" class="visually-hidden">
+        <p>A SHOPiED é uma marca de modas feminina e masculina no mercado de varejo, que oferecemos moda para
+             quem desejam estar bem vestidos e confiantes em todas as ocasiões, com peças de excelente qualidade 
+             e dentro das principais tendências. Em nossas lojas oferecemos roupas e acessórios para todas as ocasiões, 
+             todos os dias da semana e fins de semana.</p>
+        
+        <p>Conheça nossa linha com peças sofisticadas e produzidas com execelência, feitos com tecidos de altíssima 
+            qualidade, além, claro, da moda casual. São várias opções como camisas sociais e casuais, calças jeans
+             e de sarja, tricots, jaquetas, t-shirts, bermudas e acessórios.</p>        
+    </div>
+
+
+    <!--sobre modal-->
+    <div id="contato" class="visually-hidden">
+
+        <form action="post" class="form">
+
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" name="nome" id="nome" title="Insira seu nome completo" class="form-control" placeholder="Digite seu nome" aria-describedby="helpNome" >
+              <small id="helpNome" class="text-muted">
+                  Digite um nome válido
+              </small>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" name="email" id="email" class="form-control" placeholder="Digite seu e-mail" aria-describedby="helpEmail">
+                <small id="helpEmail" class="text-muted">
+                    Digite um e-mail válido
+                </small>
+            </div>
+
+            <div class="mb-3">
+                <label for="date" class="form-label">Data</label>
+                <input type="text" name="date" id="date" class="form-control" placeholder="Digite a data" aria-describedby="helpDate">
+                <small id="helpDate" class="text-muted">
+                    Digite uma data válida
+                </small>
+            </div>
+
+            <div class="mb-3">
+                <label for="time" class="form-label">Hora</label>
+                <input type="text" name="time" id="time" class="form-control" placeholder="Digite a hora" aria-describedby="helpTime">
+                <small id="helpTime" class="text-muted">
+                    Digite uma hora válida
+                </small>
+            </div>
+
+            <div class="mb-3">
+                <label for="cep" class="form-label">CEP</label>
+                <input type="text" name="cep" id="cep" class="form-control" placeholder="Digite seu cep" aria-describedby="helpCEP">
+                <small id="helpCEP" class="text-muted">
+                    Digite um cep válido
+                </small>
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label">Celular/WhatsApp</label>
+                <input type="text" name="phone" id="phone" class="form-control" placeholder="Digite seu celular" aria-describedby="helpCelular" >
+                <small id="helpCelular" class="text-muted">
+                    Digite um celular válido
+                </small>
+            </div>
+
+            <div class="mb-3">
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu cpf" aria-describedby="helpCPF" >
+                <small id="helpCPF" class="text-muted">
+                    Digite um cpf válido
+                </small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+
+        </form>
+
+    </div>
 
     <script src="./vendor/jquery/jquery-3.6.2.min.js"></script>
+    <script src="./vendor/jquery-ui/jquery-ui.min.js"></script>
     <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="./vendor/owl/js/owl.js"></script>
+    <script src="./vendor/jquery-mask/dist/jquery.mask.min.js"></script>
     <script>
         var myCarousel = document.getElementById('myCarousel')
         var carousel = new bootstrap.Carousel(myCarousel, {
             pause: false,
-            interval: 6500,
+            interval: 7000,
             wrap: true
         })
     </script>
