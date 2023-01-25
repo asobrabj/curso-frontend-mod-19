@@ -172,11 +172,27 @@ $(document).ready(function () {
          elem.addClass('invalid')
 
          return false
+
       } else {
          elem.parent().find('.text-muted').hide()
          elem.removeClass('invalid')
       }
    }
+
+   /* valida tipo email */
+   function ValidateEmail(email) {
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      //var mailformat = /^[a-z0-9]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?/i;
+      if (email.value.match(mailformat)) {
+        // alert("email valido");
+         return true;
+      }
+      else {
+         alert('verificar e-mail inválido!')
+         return false;
+      }
+   }
+
 
    $('body').on('submit', '.modal-body .form', function (e) {
 
@@ -185,68 +201,73 @@ $(document).ready(function () {
       const inputName = $('#nome')
       const inputEmail = $('#email')
 
+      /*
+      email_val = document.getElementById('email')
+      console.log(email_val.value)
+      
+      ValidateEmail(email_val)
+      */
+
       validate(inputName)
       validate(inputEmail)
+
 
       if (inputName.hasClass('invalid') || inputEmail.hasClass('invalid')) {
 
          console.log('verificar os campos obrigatorios!')
          return false
+
       } else {
-         $(this).submit()
+
+         $(this).submit();
       }
 
    })
 
+/* linha on blur*/
+$('body').on('blur', '#nome', function () {
+   validate($(this))
+})
+
+$('body').on('blur', '#email', function () {
+   validate($(this))
+   email_val = document.getElementById('email');
+   ValidateEmail(email_val)
+})
 
 
 
-   $('body').on('blur', '#nome', function () {
-      validate($(this))
-   })
-
-   $('body').on('blur', '#email', function () {
-      validate($(this))
-   })
-/*
-  $('.date').mask('00/00/0000');
-  $('.time').mask('00:00:00');
-  $('.cep').mask('00000-000');
-  $('.phone').mask('00000-0000');
-  $('.phone').mask('000.000.000-00');
-*/
-$('body').on('focus', '#date', function(){
+$('body').on('focus', '#date', function () {
    $(this).datepicker()
 })
 
-$('body').on('blur', '#date', function(){
+$('body').on('blur', '#date', function () {
    validate($(this))
-   $(this).mask('00/00/0000');
-}) 
-
-$('body').on('blur', '#time', function(){
-   validate($(this))
-   $(this).mask('00:00');
+   $(this).mask('99/99/9999');
 })
 
-$('body').on('blur', '#cep', function(){
+$('body').on('blur', '#time', function () {
    validate($(this))
-   $(this).mask('00000-000');
+   $(this).mask('99:99');
 })
 
-$('body').on('blur', '#phone', function(){
+$('body').on('blur', '#cep', function () {
    validate($(this))
-   $(this).mask('(00) 0 0000-0000');
+   $(this).mask('99999-9999');
 })
 
-$('body').on('blur', '#cpf', function(){
+$('body').on('blur', '#phone', function () {
    validate($(this))
-   $(this).mask('000.000.000-00');
+   $(this).mask('(99) 9 9999-999');
+})
+
+$('body').on('blur', '#cpf', function () {
+   validate($(this))
+   $(this).mask('999.999.999-99');
+                                                         
 })
 
 })
-
-
 
 
 /* https://igorescobar.github.io/jQuery-Mask-Plugin/docs.html */
@@ -264,26 +285,5 @@ $('body').on('blur', '#cpf', function(){
   $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
   $('.money').mask('000.000.000.000.000,00', {reverse: true});
   $('.money2').mask("#.##0,00", {reverse: true});
-  $('.ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
-    translation: {
-      'Z': {
-        pattern: /[0-9]/, optional: true
-      }
-    }
-  });
-  $('.ip_address').mask('099.099.099.099');
-  $('.percent').mask('##0,00%', {reverse: true});
-  $('.clear-if-not-match').mask("00/00/0000", {clearIfNotMatch: true});
-  $('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
-  $('.fallback').mask("00r00r0000", {
-      translation: {
-        'r': {
-          pattern: /[\/]/,
-          fallback: '/'
-        },
-        placeholder: "__/__/____"
-      }
-    });
-  $('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
-});
+ 
 */
